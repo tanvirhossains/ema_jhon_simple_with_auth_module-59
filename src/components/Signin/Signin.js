@@ -5,27 +5,27 @@ import auth from '../../_firebase-init';
 
 const Signin = () => {
 
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
-    const [confirmPassword, setConfirmedPassword] = useState()
-    const [error, setError] = useState()
-    const navigate = useNavigate()
+        const [email, setEmail] = useState()
+        const [password, setPassword] = useState()
+        const [confirmPassword, setConfirmedPassword] = useState()
+        const [error, setError] = useState()
+        const navigate = useNavigate()
 
 
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+        const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
 
 
-    const handleEmailBlur = (event) => {
-        setEmail(event.target.value)
+        const handleEmailBlur = (event) => {
+            setEmail(event.target.value)
 
-    }
-    const handlePasswordBlur = (event) => {
-        setPassword(event.target.value)
-    }
+        }
+        const handlePasswordBlur = (event) => {
+            setPassword(event.target.value)
+        }
 
-    const handleConfirmPassword = event => {
-        setConfirmedPassword(event.target.value)
-    }
+        const handleConfirmPassword = event => {
+            setConfirmedPassword(event.target.value)
+        }
 
     const handleCreateUser = (event) => {
         event.preventDefault()
